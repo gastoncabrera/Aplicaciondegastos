@@ -1,0 +1,26 @@
+body {
+  background-color: #ffdbb5;
+  font-family: "Balsamiq Sans", sans-serif;
+}
+.title {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #232021;
+}
+main {
+  display: flex;
+}
+.movimientos {
+  width: 50vw;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+}
+.descripcion,
+.monto,
+.categoria {
+  padding: 0.5rem 0;
+}
+.transaccion {
+  display: flex;
+}

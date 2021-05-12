@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./stylos.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Aplicación de Gastos</title>
+  </head>
+  <body>
+    <header class="title">
+      <h1>Aplicación de Gastos</h1>
+    </header>
+    <main>
+      <section class="movimientos">
+        <form action="" id="form">
+          <div class="transaccion">
+            Tipo de transacción =
+            <div class="container_egreso">
+              <input
+                type="radio"
+                name="tipeSelector"
+                id="Egresos"
+                value="Egreso"
+              />
+              <label for="Egresos">Egresos</label>
+            </div>
+            <div class="container_ingreso">
+              <input
+                type="radio"
+                name="tipeSelector"
+                id="Ingresos"
+                value="Ingreso"
+              />
+              <label for="Ingresos">Ingresos</label>
+            </div>
+          </div>
+          <div class="descripcion">
+            <label class="form-check-label" for="Descripcion">
+              Descripción =</label
+            >
+            <input
+              name="Descripcion"
+              type="text"
+              id="Descripcion"
+              placeholder="Descripción"
+            />
+          </div>
+          <div class="monto">
+            <label class="form-check-label" for="Monto"> Monto =</label>
+            <input type="number" name="Monto" placeholder="Monto" id="Monto" />
+          </div>
+          <div class="categoria">
+            <label class="form-check-label" for="Categoria">Categoria =</label>
+            <select
+              type="text"
+              name="Categoria"
+              placeholder="Categoria"
+              id="Categoria"
+            ></select>
+          </div>
+          <button type="submit">submit</button>
+        </form>
+      </section>
+      <section class="tabla">
+        <table id="transaccionTable">
+          <thead id="movimiento" class="table">
+            <tr>
+              <th>Tipo</th>
+              <th>Descripción</th>
+              <th>Monto</th>
+              <th>Categoria</th>
+              <th>Eliminar</th>
+            </tr>
+          </thead>
+        </table>
+      </section>
+    </main>
+    <script src="./index.js"></script>
+  </body>
+</html>
