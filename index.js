@@ -54,20 +54,22 @@ function insertRowInTransaccionTable(transactionObj) {
   );
   let newtypecellref = newtransaccionrowref.insertCell(0);
   newtypecellref.textContent = transactionObj["tipeSelector"];
-
+  newtypecellref.classList.add("col-3");
   newtypecellref = newtransaccionrowref.insertCell(1);
   newtypecellref.textContent = transactionObj["Descripcion"];
-
+  newtypecellref.classList.add("col-3");
   newtypecellref = newtransaccionrowref.insertCell(2);
   newtypecellref.textContent = newtypecellref.textContent =
     transactionObj["Monto"];
-
+  newtypecellref.classList.add("col-3");
   newtypecellref = newtransaccionrowref.insertCell(3);
   newtypecellref.textContent = newtypecellref.textContent =
     transactionObj["Categoria"];
-
+  newtypecellref.classList.add("col-3");
   let DeleteCell = newtransaccionrowref.insertCell(4);
   let DeleteButton = document.createElement("button");
+  DeleteButton.classList.add("btn-primary");
+  DeleteButton.classList.add("btn");
   DeleteButton.textContent = "Eliminar";
   DeleteCell.appendChild(DeleteButton);
 
@@ -84,7 +86,7 @@ function deleteTransactionObjet(transactionId) {
     localStorage.getItem("transactionData")
   );
   let transactionIndexInArray = transactionObjetArray.findIndex(
-    (element) => element.transactionId === transactionId
+    (element) => element.transactionId == transactionId
   );
   transactionObjetArray.splice(transactionIndexInArray, 1);
   let transactionArrayJSON = JSON.stringify(transactionObjetArray);
