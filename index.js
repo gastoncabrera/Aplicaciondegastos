@@ -8,7 +8,16 @@ form.addEventListener("submit", function (evento) {
   form.reset();
 });
 function drawCategory() {
-  let allCategory = ["Alquiler", "Comida", "Diversion"];
+  let allCategory = [
+    "Alquiler",
+    "Comida",
+    "Diversion",
+    "Sueldo",
+    "Prestamos",
+    "Mascotas",
+    "Personales",
+    "Salud",
+  ];
   for (let index = 0; index < allCategory.length; index++) {
     insertCategory(allCategory[index]);
   }

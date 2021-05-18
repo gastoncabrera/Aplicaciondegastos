@@ -7,3 +7,6 @@ body {
 .width {
   max-width: 12rem !important;
 }
+main .container {
+  overflow-x: scroll;
+}
